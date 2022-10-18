@@ -23,4 +23,14 @@ $filterFunction = function(string $name): string
 sayGoodBye("Royan", $filterFunction);
 
 
+// mengakses di luar variable menggunakan "use"
+$firstName = "Royan";
+$lastName = "Husen";
+
+$sayHelloRoyan = function() use($firstName, $lastName) {
+    echo "Hello $firstName $lastName" . PHP_EOL;
+};
+
+$sayHelloRoyan();
+
 ?>
