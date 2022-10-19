@@ -31,4 +31,17 @@ var_dump(factorialRecursive(5));
 // maka akan membutuhkan konsumsi memory besar, jika terlewat batas maka akan terjadi error memory
 
 
+// eror stack recursive
+function loop(int $value){
+    if ($value == 0) {
+        echo "End loop" . PHP_EOL;
+    } else {
+        echo "Loop-$value" . PHP_EOL;
+        loop($value - 1);
+    }
+}
+loop(3000000);
+
+
+
 ?>
